@@ -234,7 +234,8 @@ export default {
       if (this.speed < 0.01) {
         this.speed = 0;
         this.pause = true;
-        this.result.unshift(this.winner);
+        
+        this.result.push(this.winner);
         console.log('Current Result:', this.result);
         console.log('Current Winner:', this.winner);
 
@@ -273,7 +274,7 @@ export default {
       const targetDeg = this.itemDegs[randomItem].endDeg;
 
       // Set maxRotation for several rotations before landing on the target
-      this.maxRotation = 360 * 2 + targetDeg;
+      this.maxRotation = 360 * 1 + targetDeg;
       this.currentDeg = 0;
       this.pause = false;
 
