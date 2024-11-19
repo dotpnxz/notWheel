@@ -234,6 +234,8 @@ export default {
       if (this.speed < 0.01) {
         this.speed = 0;
         this.pause = true;
+        this.idleSpin = 0;
+        this.spinContinuous = 0;
         
         this.result.push(this.winner);
         console.log('Current Result:', this.result);
@@ -295,19 +297,13 @@ export default {
 
       // Use your preferred landing spots as possible offsets
       let possibleOffsets = [
-        365.5 * 5,
-        358.5 * 5,
-        358 * 5,
-        357.8 * 5,
-        360.8 * 5,
-        361.1 * 5,
-        361.5 * 5,
-        361.9 * 5,
-        362.3 * 5,
-        362.9 * 5,
-        354.9 * 5,
-        354.7 * 5,
-        355.8 * 5
+        373.5 * 2, //wag mo na to gagalawin pre pag tumaaas 373.5 pataas mali yung magiging result 
+        373 * 2,
+        372.7 * 2,
+        362.5 * 2,  
+        361.5 *2,  
+        365.5 *2,
+        345.5 *2,  //wag mo na to gagalawin pre pag bumaba 345.5 pataas mali yung magiging result 
       ];
 
       // Randomly select one of the preferred offsets
@@ -342,19 +338,13 @@ export default {
 
       // Use the same preferred landing spots for WHITE as well
       let possibleOffsets = [
-        365.5 * 5,
-        358.5 * 5,
-        358 * 5,
-        357.8 * 5,
-        360.8 * 5,
-        361.1 * 5,
-        361.5 * 5,
-        361.9 * 5,
-        362.3 * 5,
-        362.9 * 5,
-        354.9 * 5,
-        354.7 * 5,
-        355.8 * 5
+        373.5 * 2, //wag mo na to gagalawin pre pag tumaaas 373.5 pataas mali yung magiging result 
+        373 * 2,
+        372.7 * 2, 
+        362.5 * 2,  
+        361.5 *2,   
+        365.5 *2,
+        345.5 *2,  //wag mo na to gagalawin pre pag bumaba 345.5 pataas mali yung magiging result 
       ];
 
       // Randomly select one of the preferred offsets
@@ -704,8 +694,8 @@ body {
   max-height: 750px;
   transform: translateX(-50%); /* Adjust the position by translating it by half its width to maintain centering */
   border-radius: 50%; /* Ensure it remains circular */
-  animation: idleSpin 4s linear 1 forwards; 
-  animation: spinContinuous 4s linear 1 forwards;
+  animation: idleSpin 3s linear 1 forwards; 
+  animation: spinContinuous 3s linear 1 forwards;
   animation-duration: 6100ms;
 }
 @media (min-width: 1400px) {
@@ -726,6 +716,7 @@ body {
 }
 
 .triangle {
+  filter: drop-shadow(3px 3px 5px #fff);
   width: 0;
   height: 0;
   border-top: 25px solid transparent;
