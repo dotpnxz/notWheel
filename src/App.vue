@@ -300,6 +300,9 @@ export default {
         373.5 * 2, //wag mo na to gagalawin pre pag tumaaas 373.5 pataas mali yung magiging result 
         373 * 2,
         372.7 * 2,
+        363.5 * 2,
+        360.5 * 2,
+        362.5 * 2,  
         362.5 * 2,  
         361.5 *2,  
         365.5 *2,
@@ -341,6 +344,8 @@ export default {
         373.5 * 2, //wag mo na to gagalawin pre pag tumaaas 373.5 pataas mali yung magiging result 
         373 * 2,
         372.7 * 2, 
+        363.5 * 2,
+        360.5 * 2,
         362.5 * 2,  
         361.5 *2,   
         365.5 *2,
